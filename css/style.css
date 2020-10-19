@@ -19,10 +19,12 @@ html {
 nav {
   background-color: #000;
   opacity: 85%;
+  position: absolute;
+  width: 100%;
 }
 
 .pull-left {
-  display: inline-block;
+  float: left;
 }
 
 .logo-image {
@@ -32,15 +34,15 @@ nav {
 }
 
 .pull-right {
-  display: inline;
-  margin-left: 35%;
+  float: right;
+  padding-top: 25px;
+  padding-right: 5%;
 }
 
 a {
   color: #fff;
   text-decoration: none;
   padding-right: 2em;
-  vertical-align: middle;
 }
 
 .hero {
