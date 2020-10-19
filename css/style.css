@@ -1,0 +1,143 @@
+body,
+html {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.8em;
+  color: #fff;
+  display: inline-block;
+  scroll-behavior: smooth;
+}
+
+.header {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  background-color: #000;
+  opacity: 85%;
+}
+
+.pull-left {
+  display: inline-block;
+}
+
+.logo-image {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+
+.pull-right {
+  display: inline;
+  margin-left: 35%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 2em;
+  vertical-align: middle;
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  display: inline-block;
+  width: 100%;
+}
+
+.hero > h1 {
+  font-size: 5em;
+  padding-top: 25vh;
+  padding-left: 5rem;
+  color: white;
+  font-weight: 0;
+}
+
+.hero > h3 {
+  font-size: 2em;
+  padding-left: 5rem;
+  color: white;
+}
+
+.choice {
+  color: white;
+}
+
+.breaker-img-1,
+.breaker-img-2,
+.breaker-img-3,
+.breaker-img-4 {
+  position: relative;
+  opacity: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.breaker-img-1 {
+  background-image: url(../img/breaker-1.jpg);
+  height: 30vh;
+}
+
+.breaker-img-2 {
+  background-image: url(../img/breaker-2.jpg);
+  height: 30vh;
+}
+
+.breaker-img-3 {
+  background-image: url(../img/breaker-3.jpg);
+  height: 30vh;
+}
+
+.breaker-img-4 {
+  background-image: url(../img/breaker-4.jpg);
+  height: 30vh;
+}
+
+section {
+  padding: 140px 5em;
+}
+
+section::before {
+  display: block;
+  content: "";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.section-light {
+  background-color: #22211f;
+  /*-moz-box-shadow: inset 0 0 50px #000000;
+  -webkit-box-shadow: inset 0 0 50px #000000;
+  box-shadow: inset 0 0 50px #000000;*/
+}
+
+.section-dark {
+  background-color: #22211f;
+}
+
+.steve {
+  float: right;
+  margin-left: 2em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 1.5em;
+}

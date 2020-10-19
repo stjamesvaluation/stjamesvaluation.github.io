@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>St James Valuation</title>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="pull-left">
+          <a href="#"
+            ><img
+              class="logo-image"
+              src="./img/logo.jpg"
+              alt="St James Valuation Logo"
+          /></a>
+        </div>
+        <div class="pull-right">
+          <a href="#about">About Us</a>
+          <a href="#partners">Partners</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Previous Clients</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div class="hero">
+      <h1>St James Valuation</h1>
+      <h3>Your first choice for <span class="choice" id="choice"></span></h3>
+    </div>
+    <section class="section-light" id="about">
+      <h2>About Us</h2>
+      <p>
+        Marzipan soufflé gingerbread bear claw. Halvah chocolate bar chocolate
+        sweet donut macaroon brownie carrot cake. Chupa chups icing tiramisu
+        tart marshmallow gummi bears pastry pudding candy canes. Biscuit carrot
+        cake chocolate bar brownie gingerbread dessert. Marzipan tart marzipan
+        sesame snaps oat cake topping. Cake gingerbread sweet bear claw. Chupa
+        chups biscuit gummi bears bonbon candy canes jelly beans. Lollipop cake
+        toffee.
+      </p>
+    </section>
+    <div class="breaker-img-1"></div>
+    <section class="section-dark" id="partners">
+      <h2>Partners</h2>
+      <h4>Steve Taylor</h4>
+      <img src="./img/Steve.png" class="steve" />
+      <p>
+        Muffin gingerbread marshmallow candy candy canes ice cream tart lemon
+        drops. Marshmallow pudding gingerbread pastry. Cotton candy ice cream
+        donut tiramisu marshmallow icing tart cheesecake soufflé. Gummies
+        fruitcake lollipop bonbon. Dragée danish sweet muffin cake wafer gummi
+        bears. Chocolate bar gummi bears ice cream sweet roll pastry. Cake
+        cookie chocolate pudding. Soufflé biscuit candy marshmallow.
+      </p>
+    </section>
+    <div class="breaker-img-2"></div>
+    <section class="section-light" id="services">
+      <h2>Services</h2>
+      <h4>Placeholder</h4>
+      <p>
+        Candy canes liquorice macaroon tiramisu pastry brownie. Biscuit muffin
+        bonbon chupa chups pudding cheesecake jujubes candy canes cheesecake.
+        Jelly beans jelly powder liquorice caramels cookie chocolate cake
+        toffee.
+      </p>
+      <h4>Placeholder</h4>
+      <p>
+        Icing macaroon bonbon muffin topping jelly dessert fruitcake. Marzipan
+        halvah pudding liquorice biscuit brownie dragée cookie. Chocolate cake
+        cupcake brownie jelly cotton candy bear claw carrot cake cheesecake.
+        Candy canes gummies jelly-o chocolate candy tart.
+      </p>
+      <h4>Placeholder</h4>
+      <p>
+        Icing soufflé caramels cookie jelly sugar plum. Danish sweet cotton
+        candy. Lemon drops jelly jujubes wafer soufflé halvah carrot cake pie.
+        Carrot cake donut gummi bears donut wafer candy.
+      </p>
+      <h4>Placeholder</h4>
+      <p>
+        Halvah sweet roll bear claw tootsie roll chocolate bar chupa chups lemon
+        drops. Muffin carrot cake chupa chups muffin dragée. Oat cake carrot
+        cake apple pie. Halvah marzipan dessert sugar plum chocolate bar dessert
+        muffin sugar plum soufflé.
+      </p>
+    </section>
+    <div class="breaker-img-3"></div>
+    <section class="section-dark" id="clients">
+      <h2>Previous Clients</h2>
+      <p>Take a look at some of our previous clients</p>
+      <div class="prev-client-wheel" id="prev-client-wheel"></div>
+    </section>
+    <div class="breaker-img-4"></div>
+    <section class="section-light" id="contact">
+      <h2>Contact Us</h2>
+      <p>To get in touch, please email <img /> or call <img /></p>
+    </section>
+
+    <script>
+      var i = 0;
+      var j = 0;
+      var speed = 100;
+
+      function typeWriter() {
+        switch (j) {
+          case 0:
+            var txt = "family law";
+            break;
+          case 1:
+            var txt = "restructuring";
+            break;
+          case 2:
+            var txt = "private valuation";
+            break;
+          case 3:
+            var txt = "litigation and disputes";
+            break;
+          case 4:
+            var txt = "in-house legal counsel";
+            break;
+          default:
+        }
+
+        if (i < txt.length) {
+          document.getElementById("choice").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          setTimeout(restartTyping, speed * 15);
+        }
+      }
+
+      function restartTyping() {
+        document.getElementById("choice").innerHTML = "";
+        i = 0;
+        if (j < 4) {
+          j = j + 1;
+        } else {
+          j = 0;
+        }
+        typeWriter();
+      }
+
+      window.onload = typeWriter();
+    </script>
+  </body>
+</html>
