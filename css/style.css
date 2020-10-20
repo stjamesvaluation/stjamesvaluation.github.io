@@ -81,8 +81,7 @@ margin-top: 2.5em;
   transition: all 0.5s ease-out;
 }
 .menu-btn.close {
-  transform: rotate(180deg);
-  top: 20px;
+  transform: rotate(180deg) translate(0, 10px);
 }
 .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
