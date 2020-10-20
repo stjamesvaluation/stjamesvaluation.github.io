@@ -7,24 +7,28 @@ html {
   color: #fff;
   display: inline-block;
   scroll-behavior: smooth;
+  z-index: 0;
+}
+nav {
+  background-color: #000;
+  opacity: 85%;
+  width: 100%;
+  position: fixed;
 }
 
-.header {
+.hero {
   margin: 0;
-  position: fixed;
   width: 100%;
   height: 100vh;
 }
 
-nav {
-  background-color: #000;
-  opacity: 85%;
-  position: absolute;
-  width: 100%;
-}
-
 .pull-left {
   float: left;
+}
+
+.pull-right {
+  float: right;
+  padding-top: 25px;
 }
 
 .logo-image {
@@ -33,15 +37,26 @@ nav {
   padding: 10px;
 }
 
-.pull-right {
-  float: right;
-  padding-top: 25px;
-  padding-right: 5%;
-}
-
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.nav-link {
+  padding-right: 2em;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links-active {
+  display: block;
+}
+
+.icon {
+  display: block;
   padding-right: 2em;
 }
 
@@ -58,7 +73,7 @@ a {
 
 .hero > h1 {
   font-size: 5em;
-  padding-top: 25vh;
+  padding-top: 30vh;
   padding-left: 5rem;
   color: white;
   font-weight: 0;
@@ -72,6 +87,7 @@ a {
 
 .choice {
   color: white;
+  display: block;
 }
 
 .breaker-img-1,
@@ -142,4 +158,32 @@ h2 {
 
 h4 {
   font-size: 1.5em;
+}
+
+.service {
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .pull-right {
+    padding-right: 5%;
+  }
+
+  .choice {
+    display: inline;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: inline;
+  }
+
+  .services {display: flex;}
+.service-left {width: 50%; padding-right: 5%;}
+.service-right {width: 50%; padding-left: 5%;}
 }
