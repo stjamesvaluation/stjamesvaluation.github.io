@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
   z-index: 0;
   text-align: justify;
+  width: 100%;
 }
 nav {
   background-color: #000;
@@ -204,6 +205,11 @@ h4 {
 
 .service {
   width: 100%;
+}
+
+
+.steve {
+width: 300px;
 }
 
 @media only screen and (min-width: 768px) {

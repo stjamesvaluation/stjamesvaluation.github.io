@@ -9,6 +9,7 @@
     />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
     <title>St James Valuation</title>
   </head>
   <body>
@@ -72,7 +73,7 @@
       <h2>Services</h2>
       <div class="services">
         <div class="service-left">
-          <div class="service"><h4>Family Law</h4>
+          <div class="service" data-aos="fade-right"><h4>Family Law</h4>
           <p>
             We have acted for clients from all walks of life and treat all cases
             with the utmost sensitivity and confidentiality, whilst drawing robust
@@ -83,7 +84,7 @@
             ​We take SJE and shadow appointments.
           </p></div>
           <hr>
-          <div class="service">
+          <div class="service" data-aos="fade-right">
             <h4>Restructuring</h4>
             <p>
               Steve was the lead valuation partner at EY interfacing with the
@@ -105,7 +106,7 @@
         </div>
         <hr>
         <div class="service-right">
-          <div class="service">
+          <div class="service" data-aos="fade-left">
             <h4>Private Clients</h4>
             <p>
               We know how to engage with family offices and private clients. Typical engagements have included:
@@ -118,7 +119,7 @@
             </p>
           </div>
           <hr>
-          <div class="service">
+          <div class="service" data-aos="fade-left">
             <h4>Litigation and Dispute</h4>
             <p>
               Steve has acted as expert witness in the US and UK. All judgements are positive.
@@ -129,7 +130,7 @@
             </p>
           </div>
           <hr>
-          <div class="service">
+          <div class="service" data-aos="fade-left">
             <h4>In House Legal Counsel</h4>
             <p>We regularly work with in house legal counsel on a multitude of valuation issues.</p>
           </div>
@@ -238,6 +239,11 @@
       }
 
       window.onload = typeWriter();
+    </script>
+    <script src="./aos.js"></script>
+    <script>
+      AOS.init({
+      });
     </script>
     <script src="./zenscroll-min.js"></script>
     <script>
