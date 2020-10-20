@@ -154,6 +154,12 @@ section::before {
   text-align: left;
 }
 
+hr {
+  border-top: white;
+  width: 20%;
+  margin-top: 40px;
+}
+
 
 h2 {
   font-size: 3em;
@@ -190,6 +196,8 @@ h4 {
     margin-left: 2em;
     margin-bottom: 1em;
   }
+
+hr {display: none;}
 
   .services {display: flex;}
 .service-left {width: 50%; padding-right: 5%;}
