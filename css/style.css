@@ -3,11 +3,11 @@ html {
   margin: 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  line-height: 1.8em;
   color: #fff;
   display: inline-block;
   scroll-behavior: smooth;
   z-index: 0;
+  text-align: justify;
 }
 nav {
   background-color: #000;
@@ -76,9 +76,10 @@ a {
 .hero > h1 {
   font-size: 5em;
   padding-top: 30vh;
-  padding-left: 5rem;
+  padding-left: 10%;
   color: white;
   font-weight: 0;
+  text-align: left;
 }
 
 .hero > h3 {
@@ -149,10 +150,10 @@ section::before {
   background-color: #22211f;
 }
 
-.steve {
-  float: right;
-  margin-left: 2em;
+.service {
+  text-align: left;
 }
+
 
 h2 {
   font-size: 3em;
@@ -165,7 +166,6 @@ h4 {
 .service {
   width: 100%;
 }
-
 
 @media only screen and (min-width: 768px) {
 
@@ -183,6 +183,12 @@ h4 {
 
   .nav-link {
     display: inline;
+  }
+
+  .steve {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 1em;
   }
 
   .services {display: flex;}
