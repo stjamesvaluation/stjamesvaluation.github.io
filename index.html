@@ -23,7 +23,11 @@
           /></a>
         </div>
         <div class="pull-right">
-          <a class="icon" id="icon" onclick="toggleMenu()"><i class='fa fa-bars'></i></a>
+          <a class="icon" id="icon" onclick="toggleMenu()"><div class="menu-btn">
+            <div class="btn-line"> </div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div></a>
             <a class="nav-link" href="#about" onclick="checkMenu()">About Us</a>
             <a class="nav-link" href="#partners" onclick="checkMenu()">Partners</a>
             <a class="nav-link" href="#services" onclick="checkMenu()">Services</a>
@@ -136,7 +140,14 @@
     <section class="section-dark" id="clients">
       <h2>Previous Clients</h2>
       <p>Take a look at some of our previous clients</p>
-      <div class="prev-client-wheel" id="prev-client-wheel"></div>
+      <div class="prev-client-wheel" id="prev-client-wheel">
+        <img src="./img/clients/regus.png" alt="Regus" class="client">
+        <img src="./img/clients/dazn.png" alt="DAZN" class="client">
+        <img src="./img/clients/aegila.png" alt="Aegila" class="client">
+        <img src="./img/clients/regus.png" alt="Regus" class="client">
+        <img src="./img/clients/dazn.png" alt="DAZN" class="client">
+        <img src="./img/clients/aegila.png" alt="Aegila" class="client">
+      </div>
     </section>
     <div class="breaker-img-4"></div>
     <section class="section-light" id="contact">
@@ -162,12 +173,15 @@
         }
       });
       icon = document.getElementById("icon");
+      menuBtn = document.querySelector(".menu-btn");
       if (showMenu) {
-        icon.innerHTML = "<i class='fa fa-times'></i>";
+        //icon.innerHTML = "<i class='fa fa-times'></i>";
+        menuBtn.classList.add("close");
         showMenu = false;
       }
       else {
-        icon.innerHTML = "<i class='fa fa-bars'></i>";
+        //icon.innerHTML = "<i class='fa fa-bars'></i>";
+        menuBtn.classList.remove("close");
         showMenu = true;
       }
       }
