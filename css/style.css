@@ -45,19 +45,21 @@ a {
 .nav-link {
   padding-right: 2em;
   overflow: hidden;
-}
-
-.nav-links {
   display: none;
 }
 
-.nav-links-active {
+.nav-link.active {
   display: block;
+  text-align: right;
+  padding-bottom: 1em;
 }
 
 .icon {
   display: block;
   padding-right: 2em;
+  text-align: right;
+  cursor: pointer;
+  padding-bottom: 1em;
 }
 
 .hero {
@@ -179,7 +181,7 @@ h4 {
     display: none;
   }
 
-  .nav-links {
+  .nav-link {
     display: inline;
   }
 

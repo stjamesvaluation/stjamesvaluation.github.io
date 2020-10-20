@@ -22,14 +22,12 @@
           /></a>
         </div>
         <div class="pull-right">
-          <a class="icon" href="" onclick="menuToggle()">Menu</a>
-          <div class="nav-links">
+          <a class="icon" id="icon" onclick="toggleMenu()">Menu</a>
             <a class="nav-link" href="#about">About Us</a>
             <a class="nav-link" href="#partners">Partners</a>
             <a class="nav-link" href="#services">Services</a>
             <a class="nav-link" href="#clients">Previous Clients</a>
             <a class="nav-link" href="#contact">Contact</a>
-          </div>
         </div>
       </nav>
     </div>
@@ -147,13 +145,22 @@
     <script>
 
       function toggleMenu() {
-        x = document.getElementById('nav-links')
-        if (x.className === "nav-links") {
-          x.className += "-active";
+        Array.from(document.getElementsByClassName("nav-link")).forEach(function(el){
+          if (el.className === "nav-link") {
+            el.classList.add("active");
         }
         else {
-          x.className = "nav-links";
+          el.classList.remove("active");
         }
+        icon = document.getElementById("icon");
+        if(icon.innerHTML == "Menu") {
+          icon.innerHTML = "Close";
+        }
+        else {
+          icon.innerHTML = "Menu";
+        }
+        console.log("hi");
+        });
       }
 
       var i = 0;
