@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
     <title>St James Valuation</title>
   </head>
@@ -22,12 +23,12 @@
           /></a>
         </div>
         <div class="pull-right">
-          <a class="icon" id="icon" onclick="toggleMenu()">Menu</a>
-            <a class="nav-link" href="#about">About Us</a>
-            <a class="nav-link" href="#partners">Partners</a>
-            <a class="nav-link" href="#services">Services</a>
-            <a class="nav-link" href="#clients">Previous Clients</a>
-            <a class="nav-link" href="#contact">Contact</a>
+          <a class="icon" id="icon" onclick="toggleMenu()"><i class='fa fa-bars'></i></a>
+            <a class="nav-link" href="#about" onclick="checkMenu()">About Us</a>
+            <a class="nav-link" href="#partners" onclick="checkMenu()">Partners</a>
+            <a class="nav-link" href="#services" onclick="checkMenu()">Services</a>
+            <a class="nav-link" href="#clients" onclick="checkMenu()">Previous Clients</a>
+            <a class="nav-link" href="#contact" onclick="checkMenu()">Contact</a>
         </div>
       </nav>
     </div>
@@ -143,8 +144,11 @@
     </section>
 
     <script>
+      var showMenu = true;
+      var vertMenu = false;
 
       function toggleMenu() {
+        vertMenu = true;
         Array.from(document.getElementsByClassName("nav-link")).forEach(function(el){
           if (el.className === "nav-link") {
             el.classList.add("active");
@@ -152,15 +156,23 @@
         else {
           el.classList.remove("active");
         }
-        icon = document.getElementById("icon");
-        if(icon.innerHTML == "Menu") {
-          icon.innerHTML = "Close";
+      });
+      icon = document.getElementById("icon");
+      if (showMenu) {
+        icon.innerHTML = "<i class='fa fa-times'></i>";
+        showMenu = false;
+      }
+      else {
+        icon.innerHTML = "<i class='fa fa-bars'></i>";
+        showMenu = true;
+      }
+      }
+
+      function checkMenu() {
+        if(vertMenu == true) {
+          toggleMenu();
+          console.log("hi");
         }
-        else {
-          icon.innerHTML = "Menu";
-        }
-        console.log("hi");
-        });
       }
 
       var i = 0;
