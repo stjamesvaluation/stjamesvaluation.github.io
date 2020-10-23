@@ -7,9 +7,8 @@ html {
   display: inline-block;
   scroll-behavior: smooth;
   z-index: 0;
-  text-align: justify;
+  text-align: left;
   width: 100%;
-  
 }
 
 nav {
@@ -52,7 +51,7 @@ a {
 }
 
 a.nav-link.active:nth-child(2) {
-margin-top: 2.5em;
+  margin-top: 2.5em;
 }
 
 .icon {
@@ -98,12 +97,12 @@ margin-top: 2.5em;
   margin: 0;
   height: 100vh;
   display: inline-block;
-  width: 100%;
+  min-width: 100%;
 }
 
 .hero > h1 {
   font-size: 5em;
-  padding-top: 30vh;
+  padding-top: 2em;
   padding-left: 10%;
   padding-right: 10%;
   color: white;
@@ -126,8 +125,9 @@ margin-top: 2.5em;
 .breaker-img-1,
 .breaker-img-2,
 .breaker-img-3,
-.breaker-img-4 {
-  position: absolute;
+.breaker-img-4,
+.breaker-img-5 {
+  position: relative;
   opacity: 1;
   background-position: center;
   background-size: cover;
@@ -156,8 +156,13 @@ margin-top: 2.5em;
   height: 30vh;
 }
 
+.breaker-img-5 {
+  background-image: url(../img/breaker-5.jpg);
+  height: 30vh;
+}
+
 section {
-  padding: 70px; 5em;
+  padding: 70px;
 }
 
 section::before {
@@ -179,20 +184,15 @@ section::before {
 .section-dark {
   background-color: #22211f;
 }
-
-.service {
-  text-align: left;
-}
-
 hr {
   border-top: white;
   width: 20%;
   margin-top: 40px;
 }
 
-
 h2 {
   font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
@@ -204,15 +204,58 @@ h4 {
 }
 
 .services {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
-
 .steve {
-width: 300px;
+  width: 300px;
+}
+
+.footer {
+  background-color: #22211f;
+  padding: 4px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+
+  padding: 10px;
+  float: right;
+}
+
+article > h4 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+article > h6 {
+  margin: 0;
+}
+
+a.button {
+  border-style: solid;
+  padding: 1em;
+}
+
+a.button:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
+  body,
+  html {
+    text-align: justify;
+  }
+
+  .service {
+    text-align: left;
+  }
 
   .pull-right {
     padding-right: 5%;
@@ -237,16 +280,52 @@ width: 300px;
   }
 
   .prev-client-wheel {
+  }
 
+  .hero > h1 {
+    padding-top: 3em;
   }
 
   .client {
     margin: 1%;
   }
 
-hr {display: none;}
+  hr {
+    display: none;
+  }
 
-  .services {display: flex; width: 100%}
-.service-left {width: 50%; padding-right: 5%;}
-.service-right {width: 50%; padding-left: 5%;}
+  .services {
+    display: flex;
+    width: 100%;
+  }
+  .service-left {
+    width: 50%;
+    padding-right: 5%;
+  }
+  .service-right {
+    width: 50%;
+    padding-left: 5%;
+  }
+}
+
+.pr-body {
+  background-color: #22211f;
+}
+
+.pr-main {
+  background-color: #22211f;
+  padding-top: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  height: 100%;
+}
+
+hr.pr {
+  border-top: white;
+  width: 20%;
+  margin-top: 40px;
+}
+
+article.pr-article {
+  padding-bottom: 2em;
 }
