@@ -171,7 +171,7 @@ a.nav-link.active:nth-child(2) {
 }
 
 section {
-  padding: 70px;
+  padding: 5%;
 }
 
 section::before {
@@ -352,7 +352,7 @@ a.button:hover {
 
 .pr-main {
   background-color: #22211f;
-  padding: 70px;
+  padding: 5%;
   height: 100%;
 }
 
