@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Lato"
     />
     <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/style.css" />
     <title>St James Valuation</title>
   </head>
@@ -51,6 +52,30 @@
         the partner and senior team actively involved on each and every
         engagement.
       </p>
+      <br />
+      <div class="slider">
+<div><a target="_blank" href="https://dawsoncornwell.com/"><img class="firm firm-light" src="./img/firms/dc.png" alt="Dawson Cornell"></a></div>
+<div><a target="_blank" href="https://www.faegredrinker.com/en"><img class="firm firm-dark" src="./img/firms/fd.png" alt="Faegre Drinker"></a></div>
+<div><a target="_blank" href="https://www.fieldfisher.com/en"><img class="firm firm-light" src="./img/firms/fieldfisher.png" alt="Fieldfisher"></a></div>
+<div><a target="_blank" href="https://hfclaw.com/"><img class="firm firm-light" src="./img/firms/hfc.png" alt="Hughes Fowler Carruthers"></a>
+</div>
+<div><a target="_blank" href="https://www.herbertsmithfreehills.com/"><img class="firm firm-dark" src="./img/firms/hsf.png" alt="Herbert Smith Freehills"></a>
+</div>
+<div><a target="_blank" href="https://www.irwinmitchell.com/"><img class="firm firm-light" src="./img/firms/im.png" alt="Irwin Mitchell"></a>
+</div>
+<div><a target="_blank" href="https://www.katzllp.com/"><img class="firm firm-dark" src="./img/firms/katz.png" alt="Katz Partners"></a>
+</div>
+<div><a target="_blank" href="https://www.mishcon.com/"><img class="firm firm-dark" src="./img/firms/mdr.png" alt="Mischon de Reya"></a>
+</div>
+<div><a target="_blank" href="https://www.sidley.com/en/eu/"><img class="firm firm-light" src="./img/firms/sidley.png" alt="Sidley"></a>
+</div>
+<div><a target="_blank" href="https://vardags.com/"><img class="firm firm-light" src="./img/firms/vardags.png" alt="Vardags"></a>
+</div>
+<div><a target="_blank" href="https://vklaw.co.uk/"><img class="firm firm-light" src="./img/firms/vk.png" alt="Vaitlingham Kay"></a>
+</div>
+      </div>
+           
+      
     </section>
     <div class="breaker-img-1"></div>
     <section class="section-dark" id="partners">
@@ -296,6 +321,39 @@
       if(!getComputedStyle(document.body).scrollBehavior === 'smooth'){
         zenscroll.setup(defaultDuration, edgeOffset);
  }
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./slick.min.js"></script>
+    <script>
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+});
     </script>
   </body>
 </html>

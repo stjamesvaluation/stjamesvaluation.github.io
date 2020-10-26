@@ -346,3 +346,19 @@ hr.pr {
 article.pr-article {
   padding-bottom: 2em;
 }
+
+.firm {
+  padding: 5px;
+  margin: px;
+  float: left;
+  height: auto;
+  width: 80%;
+}
+
+.firm-light {
+  background-color: #fff;
+}
+
+.firm-dark {
+  background-color: #000;
+}
