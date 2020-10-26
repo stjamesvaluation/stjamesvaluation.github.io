@@ -98,7 +98,8 @@ a.nav-link.active:nth-child(2) {
 }
 
 .hero {
-  background-image: url(../img/hero.jpg);
+  background-image: url(../img/AdobeStock_113341952.jpeg);
+  background-position: 45% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
