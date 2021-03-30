@@ -11,7 +11,6 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <!-- Favicons -->
 
     <style>
       .bd-placeholder-img {
@@ -98,27 +97,20 @@
           <option>Marco Pires-Cox</option>
           <option>Steve Taylor</option>
         </select>
-        <button class="w-100 btn btn-lg btn-primary" onClick="checkTest()">
-          Download Assessment
+        <button
+          class="w-100 btn btn-lg btn-primary"
+          id="startButton"
+          onClick="checkTest()"
+        >
+          Start Assessment
         </button>
       </div>
       <p class="mt-5 mb-3 text-muted">&copy; St James Valuation 2021</p>
     </main>
   </body>
   <script>
-    function redirect() {
-      window.location.href =
-        "https://www.dl.dropboxusercontent.com/s/euzxuku34vfpjbh/FinancialAnalystAssessment2021.pdf";
-    }
-    function notTimeYet() {
-      document.getElementById("notYet").style.display = "block";
-    }
-    function timeGone() {
-      document.getElementById("timeGone").style.display = "block";
-    }
     function checkTest() {
       var user = document.getElementById("user").value;
-      console.log(user);
 
       var now = new Date();
 
@@ -179,6 +171,25 @@
           }
           break;
       }
+    }
+
+    function redirect() {
+      var startButton = document.getElementById("startButton");
+      startButton.innerHTML =
+        "Loading Assessment &nbsp; <span class='spinner-border spinner-border-sm' role='status'></span>";
+
+      var nameObject = document.getElementById("user").value;
+      localStorage.setItem("name", JSON.stringify(nameObject));
+
+      setTimeout(function () {
+        window.location.href = "./assessment.html";
+      }, 3000);
+    }
+    function notTimeYet() {
+      document.getElementById("notYet").style.display = "block";
+    }
+    function timeGone() {
+      document.getElementById("timeGone").style.display = "block";
     }
   </script>
 </html>

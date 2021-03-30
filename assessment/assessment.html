@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>St James Valuation Case Study Assessment</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <!-- Favicons -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="p-2">
+          <span id="minutes">45</span>:<span id="seconds">00</span>
+        </div>
+        <div class="p-2"><span id="name-field"></span></div>
+        <div class="p-2">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="margin-left: auto"
+            data-bs-toggle="modal"
+            data-bs-target="#submitModal"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <h1>St James Valuation Case Study Assessment</h1>
+          <br />
+          <p>
+            Jimmy’s is a high-end casual dining brand, established in the UK,
+            but looking to roll out to Asia in 2022. Set out below are its
+            summary financials and forecasts in £m.
+          </p>
+
+          <table class="table table-sm">
+            <thead>
+              <th>(£'000,000)<br />Year to 31 December</th>
+              <th></th>
+              <th>2018</th>
+              <th>2019</th>
+              <th>2020</th>
+              <th>2021</th>
+              <th>2022</th>
+              <th>2023</th>
+              <th>2024</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="9"><strong>Revenue</strong></td>
+              </tr>
+              <tr>
+                <td>UK</td>
+                <td></td>
+                <td>100</td>
+                <td>120</td>
+                <td>90</td>
+                <td>60</td>
+                <td>120</td>
+                <td>140</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>Asia</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>25</td>
+                <td>75</td>
+                <td>150</td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td colspan="9"><strong>EBITDA</strong></td>
+              </tr>
+              <tr>
+                <td>UK</td>
+                <td></td>
+                <td>10</td>
+                <td>12</td>
+                <td>7</td>
+                <td>5</td>
+                <td>12</td>
+                <td>14</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Asia</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>3</td>
+                <td>9</td>
+                <td>18</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>EBITDA:</strong> earnings before interest, tax, depreciation
+            and amortization – don’t panic if you are not an accountant, just
+            think of it as “profit”.
+          </p>
+          <br />
+          <ol>
+            <li>
+              How risky are these forecasts? What factors would you think about
+              in planning the Asian roll out in terms of its sales and profit in
+              the early years. If you were meeting the company, what questions
+              would you want to ask about the business and its growth.
+            </li>
+            <li>
+              Restaurants are often valued by multiples of revenue or multiples
+              of EBITDA. Bearing this in mind, and with some internet research,
+              what do you think Jimmy’s is worth. Please quote your sources and
+              research.
+            </li>
+          </ol>
+          <br />
+          <p>
+            Once again, there is no one correct answer – what we are looking for
+            is a demonstration of an ability to think critically, creatively and
+            commercially.
+          </p>
+          <p>
+            Please produce answers of no more than 300 words for each question
+            and submit them via the form on the right.
+          </p>
+
+          <p>
+            If you have any questions, please contact
+            <a href="mtel@stjamesvaluation.com">mtel@stjamesvaluation.com</a>.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <form
+            id="assessmentForm"
+            name="assessmentForm"
+            action="https://formspree.io/f/xqkwzvyz"
+            method="POST"
+          >
+            <label for="q1textarea" class="form-label"
+              ><strong
+                >1. How risky are these forecasts? What factors would you think
+                about in planning the Asian roll out in terms of its sales and
+                profit in the early years. If you were meeting the company, what
+                questions would you want to ask about the business and its
+                growth.</strong
+              ></label
+            >
+            <textarea
+              class="form-control"
+              id="q1textarea"
+              name="q1"
+              rows="10"
+            ></textarea>
+            <br /><br />
+            <label for="q2textarea" class="form-label"
+              ><strong
+                >2. Restaurants are often valued by multiples of revenue or
+                multiples of EBITDA. Bearing this in mind, and with some
+                internet research, what do you think Jimmy’s is worth. Please
+                quote your sources and research.</strong
+              ></label
+            >
+            <textarea
+              class="form-control"
+              id="q2textarea"
+              name="q2"
+              rows="10"
+            ></textarea>
+          </form>
+          <br /><br />
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="readyModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="readyModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="readyModalLabel">
+                Ready to begin assessment?
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>
+                Once you press 'Begin', you will have 45 minutes to complete
+                your answer.
+              </p>
+              <p>
+                When you are finished, you can submit your work by pressing the
+                'Submit' button in the top right hand corner of the window.
+              </p>
+              <p>
+                If the time elapses before you press 'Submit', your answers will
+                be automatically submitted.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                onClick="startAssessment()"
+              >
+                Begin
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="submitModal"
+        tabindex="-1"
+        aria-labelledby="submitModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="submitModalLabel">Are you sure?</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to submit your answers?</p>
+              <p>
+                Once you click the 'Submit' button below, you will no longer be
+                able to change your answers.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Back to test
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onClick="endAssessment()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var readyModal = new bootstrap.Modal(
+        document.getElementById("readyModal"),
+        {
+          backdrop: "static",
+        }
+      );
+      document.onreadystatechange = function () {
+        readyModal.show();
+        nameField = document.getElementById("name-field");
+        getName = localStorage.getItem("name");
+        getNameWithoutCommas = getName.replace(/['"]+/g, "");
+        nameField.innerHTML = getNameWithoutCommas;
+      };
+
+      var startTime = new Date().getTime();
+      var expiryTime = new Date(startTime + 45 * 60000);
+
+      function timer() {
+        var newTimer = setInterval(function () {
+          var now = new Date().getTime();
+          var timeleft = expiryTime - now;
+          var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+
+          if (timeleft < 0) {
+            endAssessment();
+          }
+        }, 1000);
+      }
+
+      function startAssessment() {
+        setTimeout(function () {
+          timer();
+        }, 2000);
+      }
+
+      function endAssessment() {
+        document.assessmentForm.submit();
+        window.location.href = "./submit.html";
+      }
+    </script>
+  </body>
+</html>
