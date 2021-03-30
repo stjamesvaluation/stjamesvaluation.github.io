@@ -302,7 +302,16 @@
         nameField = document.getElementById("name-field");
         getName = localStorage.getItem("name");
         getNameWithoutCommas = getName.replace(/['"]+/g, "");
-        nameField.innerHTML = getNameWithoutCommas;
+
+        q1field = document.getElementById("q1textarea");
+        getQ1 = localStorage.getItem("q1Answer");
+        getQ1WithoutCommas = getQ1.replace(/['"]+/g, "");
+        q1field.value = getQ1WithoutCommas;
+
+        q2field = document.getElementById("q2textarea");
+        getQ2 = localStorage.getItem("q2Answer");
+        getQ2WithoutCommas = getQ2.replace(/['"]+/g, "");
+        q2field.value = getQ2WithoutCommas;
       };
 
       var startTime = new Date().getTime();
@@ -317,6 +326,14 @@
 
           document.getElementById("minutes").innerHTML = minutes;
           document.getElementById("seconds").innerHTML = seconds;
+
+          var q1Object = document.getElementById("q1textarea").value;
+          localStorage.setItem("q1Answer", JSON.stringify(q1Object));
+
+          var q2Object = document.getElementById("q2textarea").value;
+          localStorage.setItem("q2Answer", JSON.stringify(q2Object));
+
+          localStorage.setItem("time", JSON.stringify(timeleft));
 
           if (timeleft < 0) {
             endAssessment();
