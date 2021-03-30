@@ -47,10 +47,6 @@
         margin: auto;
       }
 
-      .form-signin .checkbox {
-        font-weight: 400;
-      }
-
       .form-signin .form-floating:focus-within {
         z-index: 2;
       }
@@ -65,7 +61,7 @@
   <body class="text-center">
     <main class="form-signin">
       <img class="mb-4" src="../img/logo.jpg" alt="" width="72" height="79" />
-      <h1 class="h3 mb-3 fw-normal">Please select your namef</h1>
+      <h1 class="h3 mb-3 fw-normal">Please select your name</h1>
 
       <div
         class="alert alert-danger"
@@ -117,7 +113,7 @@
       switch (user) {
         case "Daniel Johnston":
           var startd = new Date("2021-03-31T09:00:00+01:00");
-          var endd = new Date("2021-03-31T10:00:00+01:00");
+          var endd = new Date(startd + 45 * 60000);
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -128,7 +124,7 @@
           break;
         case "Ugochukwu Ese":
           var startd = new Date("2021-03-31T10:00:00+01:00");
-          var endd = new Date("2021-03-31T11:00:00+01:00");
+          var endd = new Date(startd + 45 * 60000);
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -139,7 +135,7 @@
           break;
         case "Harry Lim":
           var startd = new Date("2021-03-31T14:00:00+01:00");
-          var endd = new Date("2021-03-31T15:00:00+01:00");
+          var endd = new Date(startd + 45 * 60000);
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -150,7 +146,7 @@
           break;
         case "Marco Pires-Cox":
           var startd = new Date("2021-04-01T11:00:00+01:00");
-          var endd = new Date("2021-04-01T12:00:00+01:00");
+          var endd = new Date(startd + 45 * 60000);
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
