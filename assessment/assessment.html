@@ -377,6 +377,11 @@
       }
 
       function endAssessment() {
+        localStorage.setItem("completed", true);
+        localStorage.removeItem("candidateName");
+        localStorage.removeItem("q1Answer");
+        localStorage.removeItem("q2Answer");
+        localStorage.removeItem("timeLeft");
         var candidateName = document.getElementById("candidate-name");
         candidateName.value = getNameWithoutCommas;
         document.assessmentForm.submit();

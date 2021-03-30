@@ -176,9 +176,17 @@
 
       var nameObject = document.getElementById("user").value;
       localStorage.setItem("candidateName", JSON.stringify(nameObject));
-      setTimeout(function () {
-        window.location.href = "./assessment.html";
-      }, 3000);
+
+      var completed = localStorage.getItem("completed");
+      if (completed == "true") {
+        setTimeout(function () {
+          window.location.href = "./submit.html";
+        }, 3000);
+      } else {
+        setTimeout(function () {
+          window.location.href = "./assessment.html";
+        }, 3000);
+      }
     }
     function notTimeYet() {
       document.getElementById("notYet").style.display = "block";
