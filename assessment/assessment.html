@@ -152,6 +152,7 @@
             action="https://formspree.io/f/xqkwzvyz"
             method="POST"
           >
+            <input type="hidden" name="candidate-name" id="candidate-name" />
             <label for="q1textarea" class="form-label"
               ><strong
                 >1. How risky are these forecasts? What factors would you think
@@ -322,8 +323,9 @@
       }
 
       function endAssessment() {
+        var candidateName = document.getElementById("candidate-name");
+        candidateName.value = getNameWithoutCommas;
         document.assessmentForm.submit();
-        window.location.href = "./submit.html";
       }
     </script>
   </body>
