@@ -203,27 +203,38 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="readyModalLabel">
-                Ready to begin assessment?
+                Assessment Information
               </h5>
             </div>
             <div class="modal-body">
+              <div id="modal-intro">
+                <p>
+                  Once you press 'Begin', you will have 45 minutes to complete
+                  your answer. You can see how much time you have left in the
+                  top left hand corner of the window.
+                </p>
+                <p>
+                  When you are finished, you can submit your work by pressing
+                  the 'Submit' button in the top right hand corner of the
+                  window.
+                </p>
+                <p>
+                  Our system should save your answers and time remaining if you
+                  leave the page, but we cannot guarantee this. Therefore it may
+                  be best to type your answers in a separate document and then
+                  transfer them to the website when you are finished.
+                </p>
+                <p>
+                  If the time elapses before you press 'Submit', your answers
+                  will be automatically submitted.
+                </p>
+              </div>
               <p>
-                Once you press 'Begin', you will have 45 minutes to complete
-                your answer. You can see how much time you have left in the top
-                left hand corner of the window.
-              </p>
-              <p>
-                When you are finished, you can submit your work by pressing the
-                'Submit' button in the top right hand corner of the window.
-              </p>
-              <p>
-                We recommend that you type your answers in a separate document
-                as if you leave or get disconnected from the page, we cannot
-                guarantee that your answers will be saved.
-              </p>
-              <p>
-                If the time elapses before you press 'Submit', your answers will
-                be automatically submitted.
+                If you have any questions or issues, please contact Matt Lee by
+                mobile on +44 7446 191428, or by email
+                <a href="mailto:mtel@stjamesvaluation.com"
+                  >mtel@stjamesvaluation.com.</a
+                >
               </p>
             </div>
             <div class="modal-footer">
@@ -231,6 +242,7 @@
                 type="button"
                 class="btn btn-primary"
                 data-bs-dismiss="modal"
+                id="startAssessmentButton"
                 onClick="startAssessment()"
               >
                 Begin
@@ -312,10 +324,26 @@
         getQ2 = localStorage.getItem("q2Answer");
         getQ2WithoutCommas = getQ2.replace(/['"]+/g, "");
         q2field.value = getQ2WithoutCommas;
+
+        var existingTime = localStorage.getItem("timeLeft");
+        if (existingTime > 0) {
+          startAssessmentButton = document.getElementById(
+            "startAssessmentButton"
+          );
+          startAssessmentButton.innerHTML = "Continue";
+          modalIntro = document.getElementById("modal-intro");
+          modalIntro.innerHTML =
+            "<p>Our system detects that you have already begun this exercise. When you press 'Continue', you should see your existing answers in the answer boxes. Additionally you will be granted the time you had left at the point at which you left the page.</p>";
+        }
       };
 
       var startTime = new Date().getTime();
-      var expiryTime = new Date(startTime + 45 * 60000);
+      var existingTime = parseInt(localStorage.getItem("timeLeft"));
+      if (existingTime > 0) {
+        var expiryTime = new Date(startTime + existingTime);
+      } else {
+        var expiryTime = new Date(startTime + 1 * 60000);
+      }
 
       function timer() {
         var newTimer = setInterval(function () {
@@ -333,7 +361,7 @@
           var q2Object = document.getElementById("q2textarea").value;
           localStorage.setItem("q2Answer", JSON.stringify(q2Object));
 
-          localStorage.setItem("time", JSON.stringify(timeleft));
+          localStorage.setItem("timeLeft", timeleft);
 
           if (timeleft < 0) {
             endAssessment();
@@ -344,12 +372,13 @@
       function startAssessment() {
         setTimeout(function () {
           timer();
-        }, 2000);
+        }, 0);
       }
 
       function endAssessment() {
         var candidateName = document.getElementById("candidate-name");
         candidateName.value = getNameWithoutCommas;
+        localStorage.setItem("completed", true);
         document.assessmentForm.submit();
       }
     </script>

@@ -113,7 +113,7 @@
       switch (user) {
         case "Daniel Johnston":
           var startd = new Date("2021-03-31T09:00:00+01:00");
-          var endd = new Date(startd + 45 * 60000);
+          var endd = new Date("2021-03-31T10:00:00+01:00");
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -124,7 +124,7 @@
           break;
         case "Ugochukwu Ese":
           var startd = new Date("2021-03-31T10:00:00+01:00");
-          var endd = new Date(startd + 45 * 60000);
+          var endd = new Date("2021-03-31T11:00:00+01:00");
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -135,7 +135,7 @@
           break;
         case "Harry Lim":
           var startd = new Date("2021-03-31T14:00:00+01:00");
-          var endd = new Date(startd + 45 * 60000);
+          var endd = new Date("2021-03-31T15:00:00+01:00");
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -146,7 +146,7 @@
           break;
         case "Marco Pires-Cox":
           var startd = new Date("2021-04-01T11:00:00+01:00");
-          var endd = new Date(startd + 45 * 60000);
+          var endd = new Date("2021-04-01T12:00:00+01:00");
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -156,8 +156,8 @@
           }
           break;
         case "Steve Taylor (test)":
-          var startd = new Date("2021-03-30T11:00:00+01:00");
-          var endd = new Date("2021-03-30T22:15:00+01:00");
+          var startd = new Date("2021-03-30T21:30:00+01:00");
+          var endd = new Date("2021-03-30T21:30:00+01:00");
           if (now > startd && now < endd) {
             redirect();
           } else if (now < startd) {
@@ -177,9 +177,17 @@
       var nameObject = document.getElementById("user").value;
       localStorage.setItem("name", JSON.stringify(nameObject));
 
-      setTimeout(function () {
-        window.location.href = "./assessment.html";
-      }, 3000);
+      var completed = localStorage.getItem("completed");
+
+      if (completed == true) {
+        setTimeout(function () {
+          window.location.href = "./submit.html";
+        }, 3000);
+      } else {
+        setTimeout(function () {
+          window.location.href = "./assessment.html";
+        }, 3000);
+      }
     }
     function notTimeYet() {
       document.getElementById("notYet").style.display = "block";
