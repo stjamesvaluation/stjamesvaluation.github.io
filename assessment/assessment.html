@@ -312,8 +312,9 @@
       document.onreadystatechange = function () {
         readyModal.show();
         nameField = document.getElementById("name-field");
-        getName = localStorage.getItem("name");
+        getName = localStorage.getItem("candidateName");
         getNameWithoutCommas = getName.replace(/['"]+/g, "");
+        nameField.innerHTML = getNameWithoutCommas;
 
         q1field = document.getElementById("q1textarea");
         getQ1 = localStorage.getItem("q1Answer");

@@ -175,7 +175,7 @@
         "Loading Assessment &nbsp; <span class='spinner-border spinner-border-sm' role='status'></span>";
 
       var nameObject = document.getElementById("user").value;
-      localStorage.setItem("name", JSON.stringify(nameObject));
+      localStorage.setItem("candidateName", JSON.stringify(nameObject));
       setTimeout(function () {
         window.location.href = "./assessment.html";
       }, 3000);
