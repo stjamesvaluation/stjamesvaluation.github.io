@@ -342,15 +342,20 @@
         }
       };
 
-      var startTime = new Date().getTime();
-      var existingTime = parseInt(localStorage.getItem("timeLeft"));
-      if (existingTime > 0) {
-        var expiryTime = new Date(startTime + existingTime);
-      } else {
-        var expiryTime = new Date(startTime + 45 * 60000);
+      function setupTimer() {
+        var startTime = new Date().getTime();
+        var existingTime = parseInt(localStorage.getItem("timeLeft"));
+        if (existingTime > 0) {
+          var expiryTime = new Date(startTime + existingTime);
+        } else {
+          var expiryTime = new Date(startTime + 45 * 60000);
+        }
+        setTimeout(function () {
+          timer(expiryTime);
+        }, 100);
       }
 
-      function timer() {
+      function timer(expiryTime) {
         var newTimer = setInterval(function () {
           var now = new Date().getTime();
           var timeleft = expiryTime - now;
@@ -375,9 +380,7 @@
       }
 
       function startAssessment() {
-        setTimeout(function () {
-          timer();
-        }, 0);
+        setupTimer();
       }
 
       function endAssessment() {
