@@ -381,6 +381,8 @@
           localStorage.setItem("timeLeft", timeleft);
 
           if (timeleft < 0) {
+            document.getElementById("minutes").innerHTML = "0";
+            document.getElementById("seconds").innerHTML = "00";
             endAssessment();
           }
         }, 1000);
