@@ -362,8 +362,14 @@
           var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
+          if (seconds < 10) {
+            var realSeconds = "0" + String(seconds);
+          } else {
+            var realSeconds = seconds;
+          }
+
           document.getElementById("minutes").innerHTML = minutes;
-          document.getElementById("seconds").innerHTML = seconds;
+          document.getElementById("seconds").innerHTML = realSeconds;
 
           var q1Object = document.getElementById("q1textarea").value;
           localStorage.setItem("q1Answer", JSON.stringify(q1Object));
